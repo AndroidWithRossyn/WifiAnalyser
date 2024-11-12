@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.setting.UserSetting"
+    android:background="@color/white_and_black">
+
+    <ImageView
+        android:id="@+id/img_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        android:layout_marginStart="6dp"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_title_more"
+        app:layout_constraintBottom_toBottomOf="@id/tv_title_more"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_title_more"
+        style="@style/heading_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/more"
+        android:layout_marginStart="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img_back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_dark_mode"
+        style="@style/more_screen_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/dark_mode"
+        app:drawableStartCompat="@drawable/ic_dark_mode"
+        app:layout_constraintStart_toStartOf="@id/img_back"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_more" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch_dark_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_dark_mode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_dark_mode"
+        android:layout_marginEnd="16dp"
+        app:thumbTint="@color/color_thumb_switch_selector"
+        app:trackTint="@color/color_track_switch_selector"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_user_guide"
+        style="@style/more_screen_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:text="@string/user_guide"
+        app:drawableStartCompat="@drawable/ic_user_guide"
+        app:layout_constraintStart_toStartOf="@id/tv_dark_mode"
+        app:layout_constraintTop_toBottomOf="@id/tv_dark_mode" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_privacy_policy"
+        style="@style/more_screen_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:text="@string/privacy_policy"
+        app:drawableStartCompat="@drawable/ic_privacy_policy"
+        app:layout_constraintStart_toStartOf="@id/tv_user_guide"
+        app:layout_constraintTop_toBottomOf="@id/tv_user_guide" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

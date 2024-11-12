@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/heading_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Wifi Analyzer"
+        app:layout_constraintEnd_toStartOf="@+id/img_start_stop_scan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_start_stop_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/ic_resume"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_title"
+        app:layout_constraintEnd_toStartOf="@id/img_capture"
+        app:layout_constraintTop_toTopOf="@id/tv_title" />
+
+    <ImageView
+        android:id="@+id/img_capture"
+        style="@style/ripple_effect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_screen_shot"
+        app:layout_constraintBottom_toBottomOf="@id/img_start_stop_scan"
+        app:layout_constraintEnd_toStartOf="@id/img_more"
+        app:layout_constraintTop_toTopOf="@id/img_start_stop_scan" />
+
+    <ImageView
+        android:id="@+id/img_more"
+        style="@style/ripple_effect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:padding="8dp"
+        android:src="@drawable/ic_more"
+        app:layout_constraintBottom_toBottomOf="@id/img_capture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/img_capture" />
+
+    <TextView
+        android:id="@+id/tv_title_fragment"
+        style="@style/ripple_effect"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/toolbar_top_margin"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Access Point"
+        android:textColor="@color/text_color"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/img_2.4ghz"
+        app:layout_constraintStart_toStartOf="@+id/tv_title"
+        app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+    <ImageView
+        android:id="@+id/img_2.4ghz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:src="@drawable/ic_twoghz_unactive"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_title_fragment"
+        app:layout_constraintEnd_toStartOf="@id/img_5ghz"
+        app:layout_constraintTop_toTopOf="@id/tv_title_fragment" />
+
+    <ImageView
+        android:id="@+id/img_5ghz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:padding="10dp"
+        android:src="@drawable/ic_five_ghz_unactive"
+        app:layout_constraintBottom_toBottomOf="@id/img_2.4ghz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/img_2.4ghz" />
+</androidx.constraintlayout.widget.ConstraintLayout>

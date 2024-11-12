@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Wifi Analyser</string>
+    <string name="setting">Setting</string>
+    <string name="export">Export</string>
+    <string name="graph">Graph</string>
+    <string name="speedo_metre">Speed Metre</string>
+    <string name="access_point">Access Point</string>
+    <string name="user_guide">User Guide</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="permission_message_first_line">Please provide location permission</string>
+    <string name="permission_message_second_line">for app functionality to work</string>
+    <string name="dbm">dBM</string>
+    <string name="locationPermissionMessage">This app needs the Location permission, please accept to use location functionality</string>
+    <string name="locationPermissionTitle">Location Permission Needed</string>
+    <string name="gpsPermissionTitle">Please enable GPS provider</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="enable">Enable</string>
+    <string name="_2_4ghz">2.4ghz</string>
+    <string name="pause_resume">Pause</string>
+    <string name="_5ghz">5ghz</string>
+    <string name="security">Security</string>
+    <string name="channel">Channel</string>
+    <string name="mac_address">MAC Address</string>
+    <string name="wifi_frequency">Wifi Frequency</string>
+    <string name="wifi_name">Wifi Name</string>
+    <string name="connected_network_name">Network Name</string>
+    <string name="connected_network_ip_address">Ip Address</string>
+    <string name="allow">Allow</string>
+    <string name="ch">CH: </string>
+    <string name="mac">MAC</string>
+    <string name="mhz"> MHz </string>
+    <string name="hidden"> ***HIDDEN SSID*** </string>
+    <string name="toolbar_title">Title</string>
+    <string name="title_access_point">Access Points title</string>
+    <string name="more">More</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="permission">Permission Required</string>
+    <string name="app_permission">App Permisison</string>
+    <string name="permission_dialog_ic">permission dialog</string>
+    <string name="please_allow_wi_fi_analyzer_to_access">Please allow WI-FI analyzer to access</string>
+    <string name="device_location_for_scanning_wi_fi">Device location for scanning wi-fi</string>
+    <string name="open_settings">Open Settings</string>
+    <string name="dot_green_text">-0 to -33 Good Signal strength</string>
+    <string name="dot_blue_text">-33 to -66 Moderate Signal strength</string>
+    <string name="dot_red_text">-66 to -100 Weak Signal strength</string>
+    <string name="speed_test">Speed Test</string>
+    <string name="exit">Exit</string>
+    <string name="are_you_sure_you_want_to_exit">Are you sure ? you want to Exit</string>
+    <string name="permission_required">Permission Required</string>
+    <string name="location_access_is_required">Location Access is required for all new apps</string>
+    <string name="in_order_to_scan_wifi_it_will_not_track_you_no">in order to scan Wifi.It will not track you no</string>
+    <string name="collect_your_location_data">collect your location data.</string>
+    <string name="go_to_android_com">Go to Android.com</string>
+    <string name="terms_you_should_know">Terms you should know</string>
+    <string name="select">Select Access Point</string>
+    <string name="select_access_points">Select Access Point</string>
+
+    <string name="privacy_policy_link">https://sites.google.com/view/wifianalyserapp/home</string>
+
+    <!--Admob ids-->
+    <string name="app_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="banner_ad">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitial_ad">ca-app-pub-3940256099942544/1033173712</string>
+
+</resources>

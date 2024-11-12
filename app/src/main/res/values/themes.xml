@@ -1,0 +1,58 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.WifiAnalyser" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/green_color</item>
+        <item name="colorPrimaryVariant">@color/green_color</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" >@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="heading_text">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginStart">16sp</item>
+    </style>
+
+    <style name="heading_medium_text">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginStart">16sp</item>
+    </style>
+
+    <style name="more_screen_text">
+        <item name="fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:drawablePadding">16dp</item>
+    </style>
+
+    <style name="text_unactive">
+        <item name="fontFamily">@font/roboto_light</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/text_unselected_color</item>
+    </style>
+
+    <style name="ripple_effect">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?android:attr/selectableItemBackgroundBorderless</item>
+        <item name="background">?android:attr/selectableItemBackgroundBorderless</item>
+
+
+
+    </style>
+</resources>

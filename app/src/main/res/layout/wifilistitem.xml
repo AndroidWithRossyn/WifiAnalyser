@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/tv_name_wifi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/padding_page_horizontal"
+        android:layout_marginVertical="@dimen/padding_content_vertical"
+        android:text="@string/wifi_name"
+        android:textColor="@color/green_color"
+        android:textSize="@dimen/text_size_small"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_mac"
+        style="@style/text_unactive"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/padding_content_vertical"
+        android:ellipsize="end"
+        android:ems="3"
+        android:maxLines="1"
+        android:text="@string/mac_address"
+        app:layout_constraintEnd_toStartOf="@id/tv_channel"
+        app:layout_constraintStart_toStartOf="@+id/tv_name_wifi"
+        app:layout_constraintTop_toBottomOf="@id/tv_name_wifi" />
+
+    <TextView
+        android:id="@+id/tv_wifi_frequency"
+        style="@style/text_unactive"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/padding_content_vertical"
+        android:ellipsize="end"
+        android:ems="3"
+        android:maxLines="1"
+        android:text="@string/wifi_frequency"
+        app:layout_constraintEnd_toStartOf="@id/tv_dbm"
+        app:layout_constraintStart_toStartOf="@+id/tv_mac"
+        app:layout_constraintTop_toBottomOf="@id/tv_mac" />
+
+    <TextView
+        android:id="@+id/tv_dbm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:textSize="12sp"
+        android:textColor="@color/text_color"
+        android:layout_marginHorizontal="@dimen/padding_page_horizontal"
+        android:layout_marginVertical="@dimen/padding_content_vertical"
+        android:layout_toEndOf="@id/tv_name_wifi"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="@string/dbm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_channel" />
+
+    <TextView
+        android:id="@+id/tv_channel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:textSize="12sp"
+        android:textColor="@color/text_color"
+        android:layout_marginHorizontal="@dimen/padding_page_horizontal"
+        android:maxLines="1"
+        android:text="@string/channel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_mac" />
+
+    <TextView
+        android:id="@+id/tv_security"
+        style="@style/text_unactive"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_wifi_frequency"
+        android:layout_marginVertical="@dimen/padding_content_vertical"
+        android:drawableStart="@drawable/ic_security"
+        android:drawablePadding="2dp"
+        android:ellipsize="end"
+        android:ems="3"
+        android:maxLines="1"
+        android:text="@string/security"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_wifi_frequency"
+        app:layout_constraintTop_toBottomOf="@id/tv_wifi_frequency" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="@dimen/padding_page_horizontal"
+        android:layout_marginTop="@dimen/padding_content_vertical"
+        android:background="#DAD5D5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_security" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.meterview.MeterViewFragment">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_upper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.18" />
+
+        <TextView
+            android:id="@+id/tv_speed_test"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="@string/access_point"
+            android:textColor="@color/green_color"
+            android:textSize="16sp"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/speedView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline_upper" />
+
+        <com.github.anastr.speedviewlib.SpeedView
+            android:id="@+id/speedView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintHeight_percent="0.35"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_centre"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_speed_test"
+            app:sv_centerCircleColor="#FF5165"
+            app:sv_indicatorColor="@color/green_color"
+            app:sv_minSpeed="-100"
+            app:sv_speedTextColor="@color/black_and_white"
+            app:sv_speedTextPadding="1dp"
+            app:sv_speedTextSize="16dp"
+            app:sv_unit="@string/dbm"
+            app:sv_unitSpeedInterval="5dp"
+            app:sv_unitTextColor="@color/black_and_white"
+            app:sv_unitTextSize="12dp"
+            app:sv_withTremble="false"
+            app:sv_indicatorWidth="10dp"
+            app:sv_marksNumber="12"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_centre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.64" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_first_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:drawableStart="@drawable/ic_dot_green"
+            android:drawablePadding="16dp"
+            android:text="@string/dot_green_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/guideline_centre" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_second_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_dot_blue"
+            android:drawablePadding="16dp"
+            android:text="@string/dot_blue_text"
+            app:layout_constraintStart_toStartOf="@+id/tv_first_range"
+            app:layout_constraintTop_toBottomOf="@+id/tv_first_range" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_third_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/ic_dot_red"
+            android:drawablePadding="16dp"
+            android:text="@string/dot_red_text"
+            app:layout_constraintStart_toStartOf="@id/tv_second_range"
+            app:layout_constraintTop_toBottomOf="@+id/tv_second_range" />
+
+        <TextView
+            android:id="@+id/tv_show_all"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/text_color"
+            android:padding="7dp"
+            android:maxLines="1"
+            android:text="@string/select_access_points"
+            android:background="@drawable/shape_show_all_access_point"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_third_range"/>
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/my_toolbar" />
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:layout_constraintStart_toStartOf="parent"
+            ads:layout_constraintEnd_toEndOf="parent"
+            ads:layout_constraintTop_toBottomOf="@+id/toolbar"
+            ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+        </com.google.android.gms.ads.AdView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ViewStub
+        android:id="@+id/permission_not_allow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:inflatedId="@layout/permission_not_allow"
+        android:layout="@layout/permission_not_allow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

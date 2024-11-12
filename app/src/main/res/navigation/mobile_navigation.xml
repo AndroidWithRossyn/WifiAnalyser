@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/access_point_destination">
+    <fragment
+        android:id="@+id/access_point_destination"
+        android:name="com.example.wifianalyser.ui.fragments.AccessPointsFragment.AccessPointFragment"
+        android:label="fragment_access_point"
+        tools:layout="@layout/fragment_access_point" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/speedometer_destination"
+        android:name="com.example.wifianalyser.ui.fragments.meterview.MeterViewFragment"
+        android:label="fragment_meter_view"
+        tools:layout="@layout/fragment_meter_view" />
+    <fragment
+        android:id="@+id/bar_graph_destination"
+        android:name="com.example.wifianalyser.ui.fragments.BarChartFragment"
+        android:label="fragment_bar_chart"
+        tools:layout="@layout/fragment_bar_chart" />
+</navigation>
